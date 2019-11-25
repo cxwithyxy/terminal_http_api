@@ -382,11 +382,6 @@ node-environment-flags@1.0.5:
     object.getownpropertydescriptors "^2.0.3"
     semver "^5.7.0"
 
-node-http-server@^8.1.2:
-  version "8.1.2"
-  resolved "https://registry.npm.taobao.org/node-http-server/download/node-http-server-8.1.2.tgz#b92782e03d545b35bff8791ff8c741221a158b5a"
-  integrity sha1-uSeC4D1UWzW/+Hkf+MdBIhoVi1o=
-
 node-pty@^0.9.0:
   version "0.9.0"
   resolved "https://registry.npm.taobao.org/node-pty/download/node-pty-0.9.0.tgz#8f9bcc0d1c5b970a3184ffd533d862c7eb6590a6"
