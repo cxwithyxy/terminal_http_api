@@ -6,8 +6,6 @@
   "author": "cx2889 <cxwithyxy@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@awesomeeng/awesome-log": "^3.2.1",
-    "@awesomeeng/awesome-server": "^1.5.0",
     "node-http-server": "^8.1.2",
     "node-pty": "^0.9.0"
   },

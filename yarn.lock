@@ -2,30 +2,6 @@
 # yarn lockfile v1
 
 
-"@awesomeeng/awesome-log@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-log/download/@awesomeeng/awesome-log-3.2.1.tgz#5db1a02d903e0b28d485ba63a24635cd6d87302d"
-  integrity sha1-XbGgLZA+CyjUhbpjokY1zW2HMC0=
-  dependencies:
-    "@awesomeeng/awesome-utils" "^1.4.10"
-
-"@awesomeeng/awesome-server@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-server/download/@awesomeeng/awesome-server-1.5.0.tgz#194bd0985462daae3c470f9adcb0d7787861ae03"
-  integrity sha1-GUvQmFRi2q48Rw+a3LDXeHhhrgM=
-  dependencies:
-    "@awesomeeng/awesome-utils" "1.4.10"
-
-"@awesomeeng/awesome-utils@1.4.10":
-  version "1.4.10"
-  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-utils/download/@awesomeeng/awesome-utils-1.4.10.tgz#377ff9673e7db9db3fa9960cd2a730fd4c9ce84f"
-  integrity sha1-N3/5Zz59uds/qZYM0qcw/Uyc6E8=
-
-"@awesomeeng/awesome-utils@^1.4.10":
-  version "1.5.0"
-  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-utils/download/@awesomeeng/awesome-utils-1.5.0.tgz#fe77f33065cb2cb3f3cfcf33e97ed6daf20c0875"
-  integrity sha1-/nfzMGXLLLPzz88z6X7W2vIMCHU=
-
 "@types/mocha@^5.2.7":
   version "5.2.7"
   resolved "https://registry.npm.taobao.org/@types/mocha/download/@types/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
