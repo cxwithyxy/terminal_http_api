@@ -19,8 +19,3 @@ ptyProcess.on('data', function(data) {
 });
 
 ptyProcess.write('dir\r');
-
-setTimeout( () =>
-{
-    ptyProcess.kill()
-}, 5e3)

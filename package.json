@@ -6,14 +6,16 @@
   "author": "cx2889 <cxwithyxy@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^12.12.12",
     "node-pty": "^0.9.0"
   },
   "scripts": {
     "base": "tsc && node",
-    "test": "yarn base ./build/test/test.js"
+    "test:Terminal": "yarn base ./build/test/Terminal.js"
   },
   "devDependencies": {
+    "@types/node": "^12.12.12",
+    "mocha": "^6.2.2",
+    "should": "^13.2.3",
     "typescript": "^3.7.2"
   }
 }
