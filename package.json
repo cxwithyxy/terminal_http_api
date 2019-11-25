@@ -1,0 +1,17 @@
+{
+  "name": "terminal_http_api",
+  "version": "0.20191125110214",
+  "main": "main.js",
+  "repository": "https://github.com/cxwithyxy/terminal_http_api.git",
+  "author": "cx2889 <cxwithyxy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-pty": "^0.9.0"
+  },
+  "scripts": {
+    "test": "tsc && node ."
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
