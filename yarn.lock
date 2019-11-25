@@ -2,6 +2,35 @@
 # yarn lockfile v1
 
 
+"@awesomeeng/awesome-log@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-log/download/@awesomeeng/awesome-log-3.2.1.tgz#5db1a02d903e0b28d485ba63a24635cd6d87302d"
+  integrity sha1-XbGgLZA+CyjUhbpjokY1zW2HMC0=
+  dependencies:
+    "@awesomeeng/awesome-utils" "^1.4.10"
+
+"@awesomeeng/awesome-server@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-server/download/@awesomeeng/awesome-server-1.5.0.tgz#194bd0985462daae3c470f9adcb0d7787861ae03"
+  integrity sha1-GUvQmFRi2q48Rw+a3LDXeHhhrgM=
+  dependencies:
+    "@awesomeeng/awesome-utils" "1.4.10"
+
+"@awesomeeng/awesome-utils@1.4.10":
+  version "1.4.10"
+  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-utils/download/@awesomeeng/awesome-utils-1.4.10.tgz#377ff9673e7db9db3fa9960cd2a730fd4c9ce84f"
+  integrity sha1-N3/5Zz59uds/qZYM0qcw/Uyc6E8=
+
+"@awesomeeng/awesome-utils@^1.4.10":
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/@awesomeeng/awesome-utils/download/@awesomeeng/awesome-utils-1.5.0.tgz#fe77f33065cb2cb3f3cfcf33e97ed6daf20c0875"
+  integrity sha1-/nfzMGXLLLPzz88z6X7W2vIMCHU=
+
+"@types/mocha@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.npm.taobao.org/@types/mocha/download/@types/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
+  integrity sha1-MV1XDMtWxTRS/4Y4c432BybVtuo=
+
 "@types/node@^12.12.12":
   version "12.12.12"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.12.tgz?cache=0&sync_timestamp=1574471702136&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.12.tgz#529bc3e73dbb35dd9e90b0a1c83606a9d3264bdb"
@@ -376,6 +405,11 @@ node-environment-flags@1.0.5:
   dependencies:
     object.getownpropertydescriptors "^2.0.3"
     semver "^5.7.0"
+
+node-http-server@^8.1.2:
+  version "8.1.2"
+  resolved "https://registry.npm.taobao.org/node-http-server/download/node-http-server-8.1.2.tgz#b92782e03d545b35bff8791ff8c741221a158b5a"
+  integrity sha1-uSeC4D1UWzW/+Hkf+MdBIhoVi1o=
 
 node-pty@^0.9.0:
   version "0.9.0"
