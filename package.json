@@ -6,10 +6,12 @@
   "author": "cx2889 <cxwithyxy@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^12.12.12",
     "node-pty": "^0.9.0"
   },
   "scripts": {
-    "test": "tsc && node ."
+    "base": "tsc && node",
+    "test": "yarn base ./build/test/test.js"
   },
   "devDependencies": {
     "typescript": "^3.7.2"
