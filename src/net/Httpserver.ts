@@ -11,16 +11,14 @@ export class Httpserver
         let app = new Koa()
         let router = new Router ()
 
-        app.use(ctx => {
-            ctx.body = 'Hello Koa';
-        });
-
-        router.get('/', async ctx => {
+        router.get('/aaa', async (ctx,next) => {
+            await next()
             ctx.body = 'Hello Router';
+            console.log(ctx.query);
         })
 
         app.use(router.routes()).use(router.allowedMethods())
-        
+
         app.listen(8000);
     }
 
