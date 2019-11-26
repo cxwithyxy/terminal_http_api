@@ -104,8 +104,6 @@ export class Terminal_manager
     result(id: number): string
     {
         let aaa = this.get_terminal(id).output()
-        console.log(aaa);
-        
         return aaa.join("")
     }
 }

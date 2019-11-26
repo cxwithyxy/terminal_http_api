@@ -13,8 +13,9 @@ export class Terminal
         this.self_terminal = pty.spawn("cmd.exe", [], {});
         this.self_terminal.on('data', (data: string) =>
         {
-            this.result_list.push(data.replace(
-                /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-Zbcf-nqry=><]/g, ''))
+            this.result_list.push(data)
+            // this.result_list.push(data.replace(
+            //     /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-Zbcf-nqry=><]/g, ''))
         })
     }
 

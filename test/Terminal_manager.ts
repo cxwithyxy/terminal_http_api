@@ -55,9 +55,10 @@ describe("Terminal_manager", () =>
     it("# run & result", async () =>
     {
         let term_id = t_m.create()
-        t_m.run(term_id, "ping baidu.com")
-        await sleep(10e3)
-        console.log(t_m.result(term_id));
+        t_m.run(term_id, "echo 222")
+        await sleep(2e3)
+        let result = t_m.result(term_id);
+        should(result).match(/echo 222/)
         
     }).timeout(30e3)
 
