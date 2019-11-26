@@ -10,8 +10,7 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
     "node-pty": "^0.9.0",
-    "sleep-promise": "^8.0.1",
-    "strip-ansi": "^6.0.0"
+    "sleep-promise": "^8.0.1"
   },
   "scripts": {
     "start": "tsc && node .",

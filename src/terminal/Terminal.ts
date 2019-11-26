@@ -1,28 +1,20 @@
-const pty = require("node-pty");
-
-import _ from "lodash";
-import stripAnsi from "strip-ansi";
+import * as pty from 'node-pty'
+import * as _ from "lodash";
 
 export class Terminal
 {
     id = 0
-    self_terminal: any
+    self_terminal: pty.IPty
     result_list: Array<string> = []
 
     constructor(id: number)
     {
         this.id = id
-        this.self_terminal = pty.spawn("cmd.exe", [],
-        {
-            name: 'xterm',
-            cols: 80,
-            rows: 30,
-            cwd: process.env.HOME,
-            env: process.env
-        });
+        this.self_terminal = pty.spawn("cmd.exe", [], {});
         this.self_terminal.on('data', (data: string) =>
         {
-            this.result_list.push(data)
+            this.result_list.push(data.replace(
+                /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-Zbcf-nqry=><]/g, ''))
         })
     }
 
@@ -59,5 +51,10 @@ export class Terminal
     run(cmd: string)
     {
         this.self_terminal.write(`${cmd}\r`)
+    }
+
+    close()
+    {
+        this.self_terminal.kill()
     }
 }

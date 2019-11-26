@@ -12,6 +12,11 @@ describe("Terminal", () =>
     {
         terminal = new Terminal(id)
     })
+
+    afterEach(() =>
+    {
+        terminal.close()
+    })
     
     it("# get_id", async () =>
     {
@@ -20,10 +25,12 @@ describe("Terminal", () =>
 
     it("# run & result", async () =>
     {
-        terminal.run(`echo 1`)
+        terminal.run(`echo 2`)
         await sleep(2e3)
         let result = terminal.output()
-        console.log(result);
+        let last_output = result.pop()
+        should(last_output).match(/echo 2/)
+        
     }).timeout(10e3)
 
 })
