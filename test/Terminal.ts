@@ -1,21 +1,29 @@
-import pty = require('node-pty')
+import { Terminal } from "../src/terminal/Terminal";
+import should from "should";
+import sleep from "sleep-promise";
 
 
-// app.on("ready", async() =>
-// {
+describe("Terminal", () =>
+{
+    let id = Math.round(Math.random()*100)
+    let terminal: Terminal
+
+    beforeEach(() =>
+    {
+        terminal = new Terminal(id)
+    })
     
-// })
-console.log(pty);
-var ptyProcess = pty.spawn("cmd.exe", [], {
-    name: 'xterm-color',
-    cols: 80,
-    rows: 30,
-    cwd: process.env.HOME,
-    env: {}
-});
+    it("# get_id", async () =>
+    {
+        should(terminal.get_id()).equal(id)
+    })
 
-ptyProcess.on('data', function(data) {
-    console.log(data);
-});
+    it("# run & result", async () =>
+    {
+        terminal.run(`echo 1`)
+        await sleep(2e3)
+        let result = terminal.output()
+        console.log(result);
+    }).timeout(10e3)
 
-ptyProcess.write('dir\r');
+})
