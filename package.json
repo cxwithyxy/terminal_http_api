@@ -16,6 +16,7 @@
     "start": "tsc && node .",
     "test:base": "tsc && mocha",
     "test:Terminal": "yarn test:base ./build/test/Terminal.js",
+    "test:Terminal_m": "yarn test:base ./build/test/Terminal_manager.js",
     "test:Httpserver": "yarn test:base ./build/test/Httpserver.js"
   },
   "devDependencies": {
