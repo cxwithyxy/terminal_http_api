@@ -18,11 +18,14 @@
     "test:Terminal": "yarn test:base ./build/test/Terminal.js",
     "test:Terminal_m": "yarn test:base ./build/test/Terminal_manager.js",
     "test:Httpserver": "yarn test:base ./build/test/Httpserver.js",
-    "exe:build_exe_file":"tsc && nexe ./build/src/main.js -o ./dist/terminal_http_api/terminal_http_api.exe",
-    "exe:copy_node_native":"xcopy .\\node_modules\\node-pty\\build\\Release\\*.* .\\dist\\node_modules\\node-pty\\build\\Release\\ /e /Y /d",
-    "exe": "yarn exe:build_exe_file && yarn exe:copy_node_native"
+    "exe:clean": "rd /s /q .\\dist",
+    "exe:build_exe_file": "tsc && nexe ./build/src/main.js -o ./dist/terminal_http_api/terminal_http_api.exe",
+    "exe:copy_node_native": "xcopy .\\node_modules\\node-pty\\build\\Release\\*.* .\\dist\\terminal_http_api\\node_modules\\node-pty\\build\\Release\\ /e /Y /d",
+    "exe:zip": "yarn jszip-cli add ./dist/terminal_http_api --output ./dist/terminal_http_api.zip",
+    "exe": "yarn exe:clean & yarn exe:build_exe_file && yarn exe:copy_node_native && yarn exe:zip"
   },
   "devDependencies": {
+    "@ffflorian/jszip-cli": "^3.0.2",
     "@types/koa": "^2.0.52",
     "@types/koa-router": "^7.0.42",
     "@types/lodash": "^4.14.149",
