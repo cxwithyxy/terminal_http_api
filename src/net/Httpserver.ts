@@ -53,14 +53,14 @@ export class Httpserver
         return router
     }
 
-    async start()
+    async start(port: number)
     {
         let app = new Koa()
         let router = this.router_init()
 
         app.use(router.routes()).use(router.allowedMethods())
 
-        app.listen(8000);
+        app.listen(port);
     }
 
 

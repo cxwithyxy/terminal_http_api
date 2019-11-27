@@ -3,7 +3,7 @@ import { Terminal_manager } from "./terminal/Terminal_manager";
 
 (async ()=>
 {
-    console.log("server start");
-    
-    await new Httpserver(new Terminal_manager()).start()
+    let port = Number(process.argv[2])
+    console.log(`server start (port: ${port})`);
+    await new Httpserver(new Terminal_manager()).start(port)
 })()
