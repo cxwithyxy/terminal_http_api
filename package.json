@@ -1,19 +1,39 @@
 {
   "name": "terminal_http_api",
   "version": "0.20191125110214",
-  "main": "main.js",
+  "main": "build/src/main.js",
   "repository": "https://github.com/cxwithyxy/terminal_http_api.git",
   "author": "cx2889 <cxwithyxy@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^12.12.12",
-    "node-pty": "^0.9.0"
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15",
+    "node-pty": "^0.9.0",
+    "sleep-promise": "^8.0.1"
   },
   "scripts": {
-    "base": "tsc && node",
-    "test": "yarn base ./build/test/test.js"
+    "start": "tsc && node .",
+    "test:base": "tsc && mocha",
+    "test:Terminal": "yarn test:base ./build/test/Terminal.js",
+    "test:Terminal_m": "yarn test:base ./build/test/Terminal_manager.js",
+    "test:Httpserver": "yarn test:base ./build/test/Httpserver.js",
+    "exe:clean": "rd /s /q .\\dist",
+    "exe:build_exe_file": "tsc && nexe ./build/src/main.js -o ./dist/terminal_http_api/terminal_http_api.exe",
+    "exe:copy_node_native": "xcopy .\\node_modules\\node-pty\\build\\Release\\*.* .\\dist\\terminal_http_api\\node_modules\\node-pty\\build\\Release\\ /e /Y /d",
+    "exe:zip": "yarn jszip-cli add ./dist/terminal_http_api --output ./dist/terminal_http_api.zip",
+    "exe": "yarn exe:clean & yarn exe:build_exe_file && yarn exe:copy_node_native && yarn exe:zip"
   },
   "devDependencies": {
+    "@ffflorian/jszip-cli": "^3.0.2",
+    "@types/koa": "^2.0.52",
+    "@types/koa-router": "^7.0.42",
+    "@types/lodash": "^4.14.149",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.12",
+    "mocha": "^6.2.2",
+    "nexe": "^3.3.2",
+    "should": "^13.2.3",
     "typescript": "^3.7.2"
   }
 }
