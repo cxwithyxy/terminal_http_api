@@ -17,7 +17,10 @@
     "test:base": "tsc && mocha",
     "test:Terminal": "yarn test:base ./build/test/Terminal.js",
     "test:Terminal_m": "yarn test:base ./build/test/Terminal_manager.js",
-    "test:Httpserver": "yarn test:base ./build/test/Httpserver.js"
+    "test:Httpserver": "yarn test:base ./build/test/Httpserver.js",
+    "exe:build_exe_file":"tsc && nexe ./build/src/main.js -o ./dist/terminal_http_api/terminal_http_api.exe",
+    "exe:copy_node_native":"xcopy .\\node_modules\\node-pty\\build\\Release\\*.* .\\dist\\node_modules\\node-pty\\build\\Release\\ /e /Y /d",
+    "exe": "yarn exe:build_exe_file && yarn exe:copy_node_native"
   },
   "devDependencies": {
     "@types/koa": "^2.0.52",
@@ -26,6 +29,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.12",
     "mocha": "^6.2.2",
+    "nexe": "^3.3.2",
     "should": "^13.2.3",
     "typescript": "^3.7.2"
   }
