@@ -23,7 +23,7 @@ export class Httpserver
     
     async web_close(ctx: Koa.ParameterizedContext<any, Router.IRouterParamContext<any, {}>>)
     {
-        ctx.body = this.t_m.close(ctx.params.id)
+        ctx.body = this.t_m.close(ctx.request.body.id)
     }
     
     async web_run(ctx: Koa.ParameterizedContext<any, Router.IRouterParamContext<any, {}>>)
