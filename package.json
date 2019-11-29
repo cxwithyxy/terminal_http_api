@@ -1,6 +1,6 @@
 {
   "name": "terminal_http_api",
-  "version": "0.20191128174939",
+  "version": "0.20191129113811",
   "main": "build/src/main.js",
   "repository": "https://github.com/cxwithyxy/terminal_http_api.git",
   "author": "cx2889 <cxwithyxy@gmail.com>",
