@@ -1,5 +1,6 @@
 import * as pty from 'node-pty'
 import * as _ from "lodash";
+import { spawn } from 'child_process';
 
 export class Terminal
 {
@@ -56,6 +57,6 @@ export class Terminal
 
     close()
     {
-        this.self_terminal.kill()
+        spawn(`tskill`, [String(this.self_terminal.pid)])
     }
 }
